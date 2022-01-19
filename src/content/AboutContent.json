@@ -1,0 +1,26 @@
+{
+  "title": "Harga Murah, Banyak Fitur",
+  "text": "Solusi Smart Lock untuk keamanan tempat tinggal Anda",
+  "section": [
+    {
+      "title": "Fingerprint",
+      "content": "Sidik Jari",
+      "icon": "fingerprint.svg"
+    },
+    {
+      "title": "Password",
+      "content": "Kata Sandi",
+      "icon": "password.svg"
+    },
+    {
+      "title": "Access Card",
+      "content": "Kartu Akses",
+      "icon": "card.svg"
+    },
+    {
+      "title": "Mekanikal Key",
+      "content": "Kunci Mekanis",
+      "icon": "key.svg"
+    }
+  ]
+}
