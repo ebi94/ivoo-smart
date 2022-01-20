@@ -90,15 +90,16 @@ const Footer = ({ t }: any) => {
               <a href="mailto:info@ivoosmart.com">
                 <Chat>{t(`info@ivoosmart.com`)}</Chat>
               </a>
-              <a href="tel:+6221 - 123123">
-                <Chat>{t(`+6221 - 123123`)}</Chat>
+              <a href="tel:+6287804031850">
+                <Chat>{t(`+62 878-0403-1850`)}</Chat>
               </a>
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
               <Language>{t("Alamat")}</Language>
-              <Para>DKI Jakarta</Para>
-              <Para>Indonesia</Para>
-              <Para>-</Para>
+              <Para>Ruko La Fenza Blok R4 No. 8</Para>
+              <Para>Villa Mutiara Cikarang</Para>
+              <Para>Ciantra, Cikarang Selatan</Para>
+              <Para>Bekasi 17530</Para>
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
               <Title>{t("Menu")}</Title>
@@ -166,7 +167,7 @@ const Footer = ({ t }: any) => {
             <NavLink to="/">
               <LogoContainer>
                 <SvgIcon
-                  src="logo-ivoo-smart.png"
+                  src="logo-ivoo.png"
                   aria-label="homepage"
                   width="150px"
                   height="auto"

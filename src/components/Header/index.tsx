@@ -43,9 +43,9 @@ const Header = ({ t }: any) => {
         <CustomNavLinkSmall onClick={() => scrollTo("about")}>
           <Span>{t("Tentang Kami")}</Span>
         </CustomNavLinkSmall>
-        {/* <CustomNavLinkSmall onClick={() => scrollTo("product")}>
-          <Span>{t("Product")}</Span>
-        </CustomNavLinkSmall> */}
+        <CustomNavLinkSmall onClick={() => scrollTo("paket")}>
+          <Span>{t("paket")}</Span>
+        </CustomNavLinkSmall>
         <CustomNavLinkSmall
           style={{ width: "180px" }}
           onClick={() => scrollTo("contact")}
@@ -63,7 +63,7 @@ const Header = ({ t }: any) => {
       <Container>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo-ivoo-smart.png" width="150px" height="auto" />
+            <SvgIcon src="logo-ivoo.png" width="125px" height="auto" />
           </LogoContainer>
           <NotHidden>
             <MenuItem />

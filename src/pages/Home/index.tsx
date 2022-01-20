@@ -2,8 +2,9 @@ import { lazy } from "react";
 import IntroContent from "../../content/IntroContent.json";
 import MiddleBlockContent from "../../content/MiddleBlockContent.json";
 import AboutContent from "../../content/AboutContent.json";
-import MissionContent from "../../content/MissionContent.json";
-import ProductContent from "../../content/ProductContent.json";
+import CctvOutdoorContent from "../../content/CctvOutdoorContent.json";
+import CctvIndoorContent from "../../content/CctvIndoorContent.json";
+import PacketContent from "../../content/PacketContent.json";
 import ContactContent from "../../content/ContactContent.json";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
@@ -39,14 +40,29 @@ const Home = () => {
         widthIcon="400px"
         id="fitur"
       />
-      {/* <ContentBlock
+      <ContentBlock
         type="right"
-        title={MissionContent.title}
-        content={MissionContent.text}
-        icon="product-launch.svg"
-        id="mission"
+        title={CctvOutdoorContent.title}
+        content={CctvOutdoorContent.text}
+        icon="cctv-outdoor.png"
+        id="cctvoutdoor"
       />
       <ContentBlock
+        type="left"
+        title={CctvIndoorContent.title}
+        content={CctvIndoorContent.text}
+        icon="cctv-indoor.png"
+        id="cctvindoor"
+      />
+      <ContentBlock
+        type="right"
+        title={PacketContent.title}
+        content={PacketContent.text}
+        button={PacketContent.button}
+        icon="paket2.png"
+        id="paket"
+      />
+      {/* <ContentBlock
         type="left"
         title={ProductContent.title}
         content={ProductContent.text}
