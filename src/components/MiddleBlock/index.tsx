@@ -27,9 +27,11 @@ const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
               <h6>{t(title)}</h6>
               <Content>{t(content)}</Content>
               {button && (
-                <Button name="submit" onClick={() => scrollTo("mission")}>
-                  {t(button)}
-                </Button>
+                <a href="https://wa.me/6287804031850?text=Halo saya tertarik dengan Ivoo Smart System. Bisa dijelaskan untuk detailnya?" target="_blank" rel="noreferrer">
+                  <Button>
+                    {t(button)}
+                  </Button>
+                </a>
               )}
             </Col>
           </ContentWrapper>

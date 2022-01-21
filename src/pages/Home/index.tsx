@@ -1,7 +1,7 @@
 import { lazy } from "react";
 import IntroContent from "../../content/IntroContent.json";
 import MiddleBlockContent from "../../content/MiddleBlockContent.json";
-import AboutContent from "../../content/AboutContent.json";
+import SmartDoorlockContent from "../../content/SmartDoorlockContent.json";
 import CctvOutdoorContent from "../../content/CctvOutdoorContent.json";
 import CctvIndoorContent from "../../content/CctvIndoorContent.json";
 import PacketContent from "../../content/PacketContent.json";
@@ -12,6 +12,7 @@ const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
+const PricingBlock = lazy(() => import("../../components/PricingBlock"));
 
 const Home = () => {
   return (
@@ -31,14 +32,15 @@ const Home = () => {
         content={MiddleBlockContent.text}
         button={MiddleBlockContent.button}
       />
+      <PricingBlock />
       <ContentBlock
         type="left"
-        title={AboutContent.title}
-        content={AboutContent.text}
-        section={AboutContent.section}
+        title={SmartDoorlockContent.title}
+        content={SmartDoorlockContent.text}
+        section={SmartDoorlockContent.section}
         icon="ivoo-smart-lock.png"
         widthIcon="400px"
-        id="fitur"
+        id="produk"
       />
       <ContentBlock
         type="right"

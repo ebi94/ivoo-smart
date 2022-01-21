@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Row, Col } from "antd";
 import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
@@ -13,12 +14,8 @@ import {
   Para,
   Large,
   Chat,
-  Empty,
   FooterContainer,
   Language,
-  Label,
-  LanguageSwitch,
-  LanguageSwitchContainer,
 } from "./styles";
 
 interface SocialLinkProps {
@@ -29,6 +26,13 @@ interface SocialLinkProps {
 const Footer = ({ t }: any) => {
   const handleChange = (language: string) => {
     i18n.changeLanguage(language);
+  };
+
+  const scrollTo = (id: string) => {
+    const element = document.getElementById(id) as HTMLDivElement;
+    element.scrollIntoView({
+      behavior: "smooth",
+    });
   };
 
   const SocialLink = ({ href, src }: SocialLinkProps) => {
@@ -103,15 +107,18 @@ const Footer = ({ t }: any) => {
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
               <Title>{t("Menu")}</Title>
-              <Large left="true" to="/">
-                {t("About")}
+              <Large left="true" onClick={() => scrollTo("harga")}>
+                {t("Harga")}
               </Large>
-              <Large left="true" to="/">
-                {t("Blog")}
+              <Large left="true"  onClick={() => scrollTo("produk")}>
+                {t("Produk")}
               </Large>
-              <Large left="true" to="/">
-                {t("Press")}
-              </Large>              
+              <Large left="true"  onClick={() => scrollTo("about")}>
+                {t("Tentang Kami")}
+              </Large>
+              <Large left="true"  onClick={() => scrollTo("contact")}>
+                {t("Hubungi Kami")}
+              </Large> 
               {/* <Title>{t("Company")}</Title>
               <Large left="true" to="/">
                 {t("About")}

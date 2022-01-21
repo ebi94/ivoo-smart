@@ -3,7 +3,8 @@
   "text": "Ivoo Smart Promo Smart Home",
   "button": [
     {
-      "title": "Pesan Sekarang"
+      "title": "Pesan Sekarang",
+      "href": "contact"
     }
   ]
 }

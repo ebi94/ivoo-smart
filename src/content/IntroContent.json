@@ -3,10 +3,12 @@
   "text": "Beautifully designed Smart System.",
   "button": [
     {
-      "title": "Pesan Sekarang"
+      "title": "Pesan Sekarang",
+      "href": "contact"
     },
     {
       "title": "Produk Kami",
+      "href": "produk",
       "color": "#fff"
     }
   ]
