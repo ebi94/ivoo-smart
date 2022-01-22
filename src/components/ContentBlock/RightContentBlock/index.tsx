@@ -29,7 +29,7 @@ const RightBlock = ({
   return (
     <RightBlockContainer>
       <Fade triggerOnce direction="right">
-        <Row justify="space-between" align="middle" id={id}>
+        <Row justify="space-between" align="middle" id={id} style={{flexFlow: 'column-reverse'}}>
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
               <h6>{t(title)}</h6>
@@ -52,7 +52,7 @@ const RightBlock = ({
             </ContentWrapper>
           </Col>
           <Col lg={11} md={11} sm={12} xs={24}>
-            <SvgIcon src={icon} width={widthIcon} height="auto" />
+            <SvgIcon src={icon} width={widthIcon ? widthIcon : '100%'} height="auto" />
           </Col>
         </Row>
       </Fade>

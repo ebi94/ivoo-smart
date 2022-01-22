@@ -5,4 +5,7 @@ export const Container = styled("section")`
   position: relative;
   width: 100%;
   display: inline-flex;
+  @media only screen and (max-width: 412px) {
+    display: block;
+  }
 `;

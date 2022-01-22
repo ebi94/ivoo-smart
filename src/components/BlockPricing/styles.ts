@@ -35,6 +35,11 @@ export const Container = styled('div')`
   box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px,
     rgb(60 64 67 / 15%) 0px 2px 6px 2px;
   padding: 25px 0;
+
+  @media only screen and (max-width: 412px) {
+    width: 90%;
+    margin: 50px auto;
+  }
 `
 
 export const ColContent = styled('div')`
@@ -48,4 +53,7 @@ export const TextWrapper = styled('div')`
   border-radius: 3rem;
   max-width: 400px;
   min-height: 400px;
+  @media only screen and (max-width: 412px) {
+    min-height: auto;
+  }
 `

@@ -109,4 +109,10 @@ export const Styles = createGlobalStyle`
     .ant-drawer-content-wrapper {
         width: 300px !important;
     }
+
+    @media only screen and (max-width: 412px) {
+        img {
+            width: 100% !importamt;
+        }
+    }
 `;
