@@ -29,7 +29,7 @@ const RightBlock = ({
   return (
     <RightBlockContainer>
       <Fade triggerOnce direction="right">
-        <Row justify="space-between" align="middle" id={id} style={{flexFlow: 'column-reverse'}}>
+        <Row justify="space-between" align="middle" id={id} className="column-responsive">
           <Col lg={11} md={11} sm={11} xs={24}>
             <ContentWrapper>
               <h6>{t(title)}</h6>

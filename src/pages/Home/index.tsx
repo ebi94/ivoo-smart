@@ -13,6 +13,7 @@ const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const PricingBlock = lazy(() => import("../../components/PricingBlock"));
+const WhatsappChatBlock = lazy(() => import("../../components/WhatsappChatBlock"));
 
 const Home = () => {
   return (
@@ -76,6 +77,7 @@ const Home = () => {
         content={ContactContent.text}
         id="contact"
       />
+      <WhatsappChatBlock />
     </Container>
   );
 };

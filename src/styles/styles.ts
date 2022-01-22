@@ -114,5 +114,9 @@ export const Styles = createGlobalStyle`
         img {
             width: 100% !importamt;
         }
+
+        .column-responsive {
+            flex-flow: column-reverse;
+        }
     }
 `;
