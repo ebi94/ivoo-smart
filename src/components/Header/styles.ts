@@ -7,7 +7,7 @@ export const HeaderSection = styled('header')`
   position: sticky;
   top: 0;
   background: #fff;
-  z-index: 9999999999;
+  z-index: 10;
   .ant-row-space-between {
     align-items: center;
     text-align: center;

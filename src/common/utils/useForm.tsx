@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { notification } from "antd";
+import { notification, message } from "antd";
 import axios from "axios";
+import ContactForm from "../../services/contactForm";
 
 export const useForm = (validate: any) => {
   const [values, setValues] = useState({});
@@ -14,20 +15,27 @@ export const useForm = (validate: any) => {
     });
   };
 
-  const handleSubmit = (event: React.ChangeEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.ChangeEvent<HTMLFormElement>) => {
     event.preventDefault();
     setErrors(validate(values));
     // Your url for API
-    const url = "";
-    if (Object.keys(values).length === 3) {
-      axios
-        .post(url, {
-          ...values,
-        })
-        .then(() => {
-          setShouldSubmit(true);
-        });
+    const res = await ContactForm(values);
+    console.log('res contact form', res)
+    if (res && res.status === "OK") {
+      setShouldSubmit(true);
+      // message.success('Pesan anda berhasil dikirim');
+    } else {
+      // message.error('Ooops ada kesalahan server !');
     }
+    // if (Object.keys(values).length === 3) {
+    //   axios
+    //     .post(url, {
+    //       ...values,
+    //     })
+    //     .then(() => {
+    //       setShouldSubmit(true);
+    //     });
+    // }
   };
 
   useEffect(() => {

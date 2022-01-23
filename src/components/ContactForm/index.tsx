@@ -1,4 +1,5 @@
-import { Row, Col } from "antd";
+import {useState} from "react";
+import { Row, Col, message } from "antd";
 import { withTranslation } from "react-i18next";
 import { Slide, Zoom } from "react-awesome-reveal";
 import { ContactProps, ValidationTypeProps } from "./types";
@@ -8,38 +9,23 @@ import { Button } from "../../common/Button";
 import Block from "../Block";
 import Input from "../../common/Input";
 import TextArea from "../../common/TextArea";
+import ContactForm from "../../services/contactForm";
 import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
-
-const Recipient = require("mailersend").Recipient;
-const EmailParams = require("mailersend").EmailParams;
-const MailerSend = require("mailersend");
 
 const Contact = ({ title, content, id, t }: ContactProps) => {
   const { values, errors, handleChange, handleSubmit } = useForm(
     validate
   ) as any;
 
-  const MailerSendApiKey = process.env.REACT_APP_MAILERSEND_KEY;
-
-  const mailersend = new MailerSend({
-      api_key: MailerSendApiKey,
-  });
-
-  const recipients = [
-    new Recipient("info@ivoosmart.com", "Kontak Form Ivoo Smart")
-  ];
-
-  const emailParams = new EmailParams()
-        .setFrom("info@ivoosmart.com")
-        .setFromName("Client")
-        .setRecipients(recipients)
-        .setSubject("Kontak Form")
-        .setHtml("This is the HTML content")
-        .setText("This is the text content");
-
-  const sendEmailContactForm = () => {
-    mailersend.send(emailParams);
-  }
+  
+  // const handleSubmit = async (values) => {
+  //   const res = await ContactForm(values)
+  //   if (res) {
+  //     message.success('Pesan anda berhasil dikirim');
+  //   } else {
+  //     message.error('Ooops ada kesalahan server !');
+  //   }
+  // }
 
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
@@ -93,7 +79,6 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
               </Col>
               <ButtonContainer>
                 <Button name="submit">{t("Kirim")}</Button>
-                <Button onClick={() => sendEmailContactForm()}>Test</Button>
               </ButtonContainer>
             </FormGroup>
           </Slide>
