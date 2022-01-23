@@ -10,10 +10,37 @@ import Input from "../../common/Input";
 import TextArea from "../../common/TextArea";
 import { ContactContainer, FormGroup, Span, ButtonContainer } from "./styles";
 
+const Recipient = require("mailersend").Recipient;
+const EmailParams = require("mailersend").EmailParams;
+const MailerSend = require("mailersend");
+
 const Contact = ({ title, content, id, t }: ContactProps) => {
   const { values, errors, handleChange, handleSubmit } = useForm(
     validate
   ) as any;
+
+  const MailerSendApiKey = process.env.REACT_APP_MAILERSEND_KEY;
+
+  const mailersend = new MailerSend({
+      api_key: MailerSendApiKey,
+  });
+
+  const recipients = [
+    new Recipient("info@ivoosmart.com", "Kontak Form Ivoo Smart")
+  ];
+
+  const emailParams = new EmailParams()
+        .setFrom("info@ivoosmart.com")
+        .setFromName("Client")
+        .setRecipients(recipients)
+        .setSubject("Kontak Form")
+        .setHtml("This is the HTML content")
+        .setText("This is the text content");
+
+  const sendEmailContactForm = () => {
+    mailersend.send(emailParams);
+  }
+
 
   const ValidationType = ({ type }: ValidationTypeProps) => {
     const ErrorMessage = errors[type];
@@ -65,7 +92,8 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
                 <ValidationType type="message" />
               </Col>
               <ButtonContainer>
-                <Button name="submit">{t("Submit")}</Button>
+                <Button name="submit">{t("Kirim")}</Button>
+                <Button onClick={() => sendEmailContactForm()}>Test</Button>
               </ButtonContainer>
             </FormGroup>
           </Slide>

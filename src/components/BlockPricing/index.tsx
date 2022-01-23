@@ -13,7 +13,6 @@ interface Props {
 }
 
 const BlockPricing = ({ title, content, price, basePrice, t }: Props) => {
-  console.log('hha', content)
   return (
     <Container>
       <Title>{t(title)}</Title>
@@ -22,7 +21,6 @@ const BlockPricing = ({ title, content, price, basePrice, t }: Props) => {
       <TextWrapper>
         {typeof content === "object" &&
           content.map((item: any, id: number) => {
-            console.log('item', item)
             return (
               <ColContent key={id}>
                 <SvgIcon src={item.icon} width="16px" height="auto" />

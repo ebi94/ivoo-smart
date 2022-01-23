@@ -4,7 +4,6 @@ import BlockPricing from "../BlockPricing";
 import PricingContent from "../../content/PricingContent.json";
 
 const PricingBlock = () => {
-  console.log('pricing', PricingContent)
   return (
     <Container id="harga">
         {typeof PricingContent === "object" &&
