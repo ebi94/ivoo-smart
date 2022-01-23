@@ -25,7 +25,14 @@ const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
           <ContentWrapper>
             <Col lg={24} md={24} sm={24} xs={24}>
               <h6>{t(title)}</h6>
-              <Content>{t(content)}</Content>
+              <Content>
+                <div
+                  // eslint-disable-next-line react/no-danger
+                  dangerouslySetInnerHTML={{
+                      __html: content
+                  }}
+                />
+              </Content>
               {button && (
                 <a href="https://wa.me/6287804031850?text=Halo saya tertarik dengan Ivoo Smart System. Bisa dijelaskan untuk detailnya?" target="_blank" rel="noreferrer">
                   <Button>

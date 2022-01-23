@@ -4,6 +4,7 @@ import MiddleBlockContent from "../../content/MiddleBlockContent.json";
 import SmartDoorlockContent from "../../content/SmartDoorlockContent.json";
 import CctvOutdoorContent from "../../content/CctvOutdoorContent.json";
 import CctvIndoorContent from "../../content/CctvIndoorContent.json";
+import ListContent from "../../content/ListContent.json";
 import PacketContent from "../../content/PacketContent.json";
 import ContactContent from "../../content/ContactContent.json";
 
@@ -64,6 +65,14 @@ const Home = () => {
         button={PacketContent.button}
         icon="paket2.png"
         id="paket"
+      />
+      <ContentBlock
+        type="right"
+        title={ListContent.title}
+        content={ListContent.text}
+        icon="logo-ivoo-circle.png"
+        widthIcon="400px"
+        id="about"
       />
       {/* <ContentBlock
         type="left"

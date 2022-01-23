@@ -11,7 +11,7 @@ export const useForm = (validate: any) => {
   const openNotificationWithIcon = () => {
     notification["success"]({
       message: "Success",
-      description: "Your message has been sent!",
+      description: "Pesan anda berhasil dikirim ",
     });
   };
 
