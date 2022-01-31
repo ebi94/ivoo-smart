@@ -34,7 +34,7 @@ const Home = () => {
         content={MiddleBlockContent.text}
         button={MiddleBlockContent.button}
       />
-      <PricingBlock />
+      {/* <PricingBlock /> */}
       <ContentBlock
         type="left"
         title={SmartDoorlockContent.title}
