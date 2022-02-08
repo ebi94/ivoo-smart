@@ -86,7 +86,7 @@ const Home = () => {
         content={ContactContent.text}
         id="contact"
       />
-      {/* <WhatsappChatBlock /> */}
+      <WhatsappChatBlock />
     </Container>
   );
 };
