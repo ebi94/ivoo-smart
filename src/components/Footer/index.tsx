@@ -94,9 +94,9 @@ const Footer = ({ t }: any) => {
               <a href="mailto:info@ivoosmart.com">
                 <Chat>{t(`info@ivoosmart.com`)}</Chat>
               </a>
-              <a href="tel:+6287804031850">
+              {/* <a href="tel:+6287804031850">
                 <Chat>{t(`+62 878-0403-1850`)}</Chat>
-              </a>
+              </a> */}
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
               <Language>{t("Alamat")}</Language>
