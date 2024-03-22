@@ -94,16 +94,15 @@ const Footer = ({ t }: any) => {
               <a href="mailto:info@ivoosmart.com">
                 <Chat>{t(`info@ivoosmart.com`)}</Chat>
               </a>
-              <a href="tel:+6285157297277">
-                <Chat>{t(`+62 851-5729-7277`)}</Chat>
+              <a href="tel:+6285333392296">
+                <Chat>{t(`+62 853-3339-2296`)}</Chat>
               </a>
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
               <Language>{t("Alamat")}</Language>
-              <Para>Ruko La Fenza Blok R4 No. 8</Para>
-              <Para>Villa Mutiara Cikarang</Para>
-              <Para>Ciantra, Cikarang Selatan</Para>
-              <Para>Bekasi 17530</Para>
+              <Para>Jl.Haruman 3 No D56</Para>
+              <Para>Kayuringin Jaya</Para>
+              <Para>Bekasi Selatan</Para>
             </Col>
             <Col lg={6} md={6} sm={12} xs={12}>
               <Title>{t("Menu")}</Title>

@@ -34,7 +34,7 @@ const MiddleBlock = ({ title, content, button, t }: MiddleBlockProps) => {
                 />
               </Content>
               {button && (
-                <a href="https://wa.me/6285157297277?text=Halo saya tertarik dengan Ivoo Smart System. Bisa dijelaskan untuk detailnya?" target="_blank" rel="noreferrer">
+                <a href="https://wa.me/6285333392296?text=Halo saya tertarik dengan Ivoo Smart System. Bisa dijelaskan untuk detailnya?" target="_blank" rel="noreferrer">
                   <Button>
                     {t(button)}
                   </Button>
